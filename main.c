@@ -19,7 +19,12 @@ int main(int argc, char *argv[]) {
     x->val = 'a';
     y->val = 'b';
     z->val = 'c';
-
+    a->next = NULL;
+    b->next = NULL;
+    c->next = NULL;
+    x->next = NULL;
+    y->next = NULL;
+    z->next = NULL;
 
     s_insert(a, b);
     s_insert(b, c);
