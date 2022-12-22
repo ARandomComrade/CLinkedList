@@ -12,8 +12,10 @@ void s_insert(struct snode *root, struct snode *new_node) {
 
 void s_traverse_val(struct snode *root) {
     struct snode *ptr;
-    for(ptr = root; ptr != NULL; ptr = ptr->next) {
-        printf("%d\n", ptr->val);
+    for (ptr = root; ptr != NULL; ptr = ptr->next) {
+        if (ptr != null) {
+            printf("%d\n", ptr->val);
+        }
     }
 }
 
