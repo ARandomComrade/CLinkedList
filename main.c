@@ -4,7 +4,7 @@
 #include "dnode.h"
 
 int main(int argc, char *argv[]) {
-    struct snode *a, *b, *c;
+    snode *a, *b, *c;
     struct dnode *x, *y, *z;
     a = malloc(sizeof(struct snode*));
     b = malloc(sizeof(struct snode*));

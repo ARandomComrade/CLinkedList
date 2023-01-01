@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "dnode.h"
 
-void d_insert(struct dnode *root, struct dnode *new_node) {
+void d_insert(dnode *root, dnode *new_node) {
     if (root != NULL && new_node != NULL) {
         if (root->next == NULL) {
             root->next = new_node;
             new_node->prev = root;
         } else {
-            struct dnode *tmp;
+            dnode *tmp;
             tmp = root->next;
             root->next = new_node;
             new_node->prev = root;
@@ -17,8 +17,8 @@ void d_insert(struct dnode *root, struct dnode *new_node) {
     }
 }
 
-void d_traverse_val(struct dnode *root) {
-    struct dnode *ptr;
+void d_traverse_val(dnode *root) {
+    dnode *ptr;
     for (ptr = root; ptr != NULL; ptr = ptr->next) {
         if (ptr != NULL) {
             printf("%c\n", ptr->val);
@@ -26,9 +26,9 @@ void d_traverse_val(struct dnode *root) {
     }
 }
 
-void d_delete_node(struct dnode* root, struct dnode *rem) {
+void d_delete_node(dnode* root, dnode *rem) {
     if (root != NULL && rem != NULL) {
-        struct dnode *ptr, *tmp_n, *tmp_p;
+        dnode *ptr, *tmp_n, *tmp_p;
         for (ptr = root; ptr != NULL; ptr = ptr->next) {
             if (ptr == rem) {
                 tmp_n = ptr->next;
